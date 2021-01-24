@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>b4495062-bd22-4cc1-8528-5704accb529d</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AccountingNotebook.Data\AccountingNotebook.Data.csproj" />
+    <ProjectReference Include="..\AccountingNotebook.Services\AccountingNotebook.Services.csproj" />
+  </ItemGroup>
+
+
+</Project>

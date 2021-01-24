@@ -1,0 +1,23 @@
+<div class="container">
+  <h1 class="text-center my-4">Transaction List</h1>
+
+  <div class="accordion" *ngFor="let item of transactions$ | async; let i = index">
+    <div class="card">
+        <div class="card-header" [ngClass]="{ 'debit':item.type == 0,'credit':item.type == 1}">
+            <p class="mb-0">
+                <a class="btn btn-link" type="button" data-toggle="collapse" href="#transaction-{{ i }}" style="color: white;"> 
+                  <span *ngIf="item.type == 0"> -{{ '$' + item.amount }} </span> 
+                  <span *ngIf="item.type == 1"> +{{ '$' + item.amount }} </span> 
+                </a>
+            </p>
+        </div>
+  
+        <div id="transaction-{{ i }}" class="collapse">
+            <div class="card-body" [ngClass]="{ 'debit-body':item.type == 0, 'credit-body':item.type == 1 }">
+                <p>Transaction Id = {{ item.id }}</p>   
+                <p>EffectiveDate = {{ item.effectiveDate | date }}</p>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

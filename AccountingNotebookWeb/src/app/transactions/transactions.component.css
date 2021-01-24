@@ -1,0 +1,12 @@
+.debit {
+    background-color: #dc3545;
+}
+.credit {
+    background-color: #28a745;
+}
+.debit-body {
+    background-color: #f58a95;
+}
+.credit-body {
+    background-color: #7fdc94
+}
